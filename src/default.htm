@@ -1,0 +1,59 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <title>image-show</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    
+    <link type="text/css" href="styles/Site.css" rel="Stylesheet" />
+
+    <script type="text/javascript" src="scripts/jquery.js"></script>
+    <script type="text/javascript" src="scripts/baseclass.js"></script>
+    
+    <script type="text/javascript" src="scripts/p-control.js"></script>
+    <script type="text/javascript" src="scripts/p-control1.js"></script>
+    <script type="text/javascript" src="scripts/p-application.js"></script>
+    
+    <script type="text/javascript">
+	
+        var json = [
+            { ItemTime: 3, Left: 730, Top: 630, Size: 60, ImageURL: "styles/images/item_images/1440.jpg", Direction: {H: "LEFT"} },
+            { ItemTime: 1, Left: 230, Top: 530, Size: 60, ImageURL: "styles/images/item_images/64.jpg", Direction: { H: "RIGHT"} },
+            { ItemTime: 4, Left: 730, Top: 230, Size: 60, ImageURL: "styles/images/item_images/1058.jpg", Direction: { V: "UP"} },
+            { ItemTime: 5, Left: 230, Top: 330, Size: 60, ImageURL: "styles/images/item_images/10644.jpg", Direction: { V: "DOWN"} },
+            { ItemTime: 6, Left: 730, Top: 94, Size: 60, ImageURL: "styles/images/item_images/11424.jpg", Direction: { H: "LEFT", V: "DOWN"} },
+            { ItemTime: 7, Left: 120, Top: 130, Size: 60, ImageURL: "styles/images/item_images/122.jpg", Direction: { H: "RIGHT", V: "UP"} },
+            { ItemTime: 8, Left: 870, Top: 230, Size: 60, ImageURL: "styles/images/item_images/124.jpg", Direction: { H: "LEFT", V: "DOWN"} },
+            { ItemTime: 2, Left: 62, Top: 130, Size: 60, ImageURL: "styles/images/item_images/1276.jpg", Direction: { H: "RIGHT", V: "DOWN"} },
+            { ItemTime: 3, Left: 90, Top: 230, Size: 60, ImageURL: "styles/images/item_images/12968.jpg", Direction: { H: "LEFT", V: "DOWN"} },
+            { ItemTime: 5, Left: 210, Top: 230, Size: 60, ImageURL: "styles/images/item_images/132.jpg", Direction: { H: "RIGHT", V: "DOWN"} },
+            { ItemTime: 6, Left: 390, Top: 450, Size: 60, ImageURL: "styles/images/item_images/14.jpg", Direction: { H: "LEFT", V: "DOWN"} },
+            { ItemTime: 7, Left: 430, Top: 457, Size: 60, ImageURL: "styles/images/item_images/14330.jpg", Direction: { H: "RIGHT", V: "UP"} },
+            { ItemTime: 2, Left: 730, Top: 820, Size: 60, ImageURL: "styles/images/item_images/15058.jpg", Direction: { H: "LEFT", V: "UP"} },
+            { ItemTime: 4, Left: 930, Top: 830, Size: 60, ImageURL: "styles/images/item_images/1522.jpg", Direction: { H: "RIGHT", V: "DOWN"} },
+            { ItemTime: 1, Left: 730, Top: 30, Size: 60, ImageURL: "styles/images/item_images/15574.jpg", Direction: { H: "LEFT", V: "UP"} },
+            { ItemTime: 9, Left: 237, Top: 312, Size: 60, ImageURL: "styles/images/item_images/1620.jpg", Direction: { H: "RIGHT", V: "UP"} },
+            { ItemTime: 0, Left: 325, Top: 590, Size: 60, ImageURL: "styles/images/item_images/3504.jpg", Direction: { H: "RIGHT", V: "UP"} }
+        ];
+
+        var d = window.document;
+        var app = null;
+
+        $(document).ready($.proxy(function () {
+            app = new IApplication(json);
+        }, this));
+    </script>
+    
+</head>
+<body>
+    <div id="rootContainer">
+        <canvas id="bcanvas"></canvas>
+        <div id="header" style="position:absolute;left:70px;top:30px;">
+            <h1 style="color:#800080; font-weight: bold;">Image Show</h1>
+            <span>powered by Benjamin Peng</span>
+        </div>
+        
+        <div id="footer">
+        </div>
+    </div>
+</body>
+</html>
